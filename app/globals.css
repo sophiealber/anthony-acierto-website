@@ -8,10 +8,10 @@ html {
 
 @layer base {
   body {
-    @apply bg-white text-gray-800 antialiased;
+    @apply bg-white text-gray-700 antialiased;
   }
 
   ::selection {
-    @apply bg-sky-100 text-sky-900;
+    @apply bg-brand-100 text-brand-dark;
   }
 }

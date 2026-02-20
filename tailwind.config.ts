@@ -6,20 +6,21 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: "#0369a1",
-          light: "#0ea5e9",
-          dark: "#075985",
-          50: "#f0f9ff",
+          DEFAULT: "#1d4ed8",
+          light: "#3b82f6",
+          dark: "#1e3a8a",
+          50: "#eff6ff",
+          100: "#dbeafe",
+        },
+        warm: {
+          50: "#fefce8",
+          100: "#fef9c3",
+          DEFAULT: "#ca8a04",
         },
       },
       fontFamily: {
-        sans: [
-          "Inter",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "sans-serif",
-        ],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
       },
     },
   },

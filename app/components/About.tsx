@@ -1,60 +1,44 @@
 export default function About() {
   return (
-    <section id="about" className="px-8 lg:px-16 pt-12 lg:pt-20 pb-16">
-      <p className="text-sm font-semibold text-brand uppercase tracking-wide">
-        About
-      </p>
-      <h2 className="mt-2 text-3xl font-bold text-slate-900">
-        Aspiring Physician-Researcher
-      </h2>
+    <section id="about" className="bg-brand-50/50">
+      <div className="max-w-6xl mx-auto px-6 py-20">
+        <div className="max-w-3xl">
+          <h2 className="text-4xl font-serif text-gray-900">About me</h2>
 
-      <div className="mt-6 space-y-4 text-slate-600 leading-relaxed max-w-2xl">
-        <p>
-          I&apos;m a medical student at the{" "}
-          <span className="text-slate-900 font-medium">
-            University of Cincinnati College of Medicine
-          </span>{" "}
-          (Class of 2028), working toward a career at the intersection of
-          technology and healthcare.
-        </p>
-        <p>
-          I graduated from{" "}
-          <span className="text-slate-900 font-medium">
-            Syracuse University
-          </span>{" "}
-          with a B.S. in Biomedical Engineering. My research spans biomaterials,
-          AI-driven surgical literature review, and medical device design — with
-          multiple publications in peer-reviewed journals.
-        </p>
-        <p>
-          As a{" "}
-          <span className="text-slate-900 font-medium">
-            Northwestern Mutual Childhood Cancer Sibling Scholar
-          </span>
-          , my personal connection to healthcare fuels my commitment to
-          improving patients&apos; lives through both clinical practice and
-          engineering innovation.
-        </p>
-      </div>
+          <div className="mt-8 space-y-5 text-lg text-gray-600 leading-relaxed">
+            <p>
+              My background in biomedical engineering gives me a unique lens on
+              patient care. From developing shape memory polymers that prevent
+              biofilm growth on implants, to programming AI tools that
+              streamline cardiac surgery research at Cleveland Clinic, I&apos;m
+              passionate about bringing engineering innovation into the clinic.
+            </p>
+            <p>
+              Outside the lab, you&apos;ll find me reading historical fiction,
+              training for long-distance runs, or singing with the UCCOM chorus.
+            </p>
+          </div>
 
-      <div className="mt-8 flex flex-wrap gap-3">
-        {[
-          "Biomaterials",
-          "AI in Surgery",
-          "Medical Devices",
-          "Hand Surgery",
-          "Health Literacy",
-          "Python",
-          "Spanish",
-          "Italian (beginner)",
-        ].map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full bg-brand-50 px-3 py-1 text-xs font-medium text-brand"
-          >
-            {tag}
-          </span>
-        ))}
+          <div className="mt-10 flex flex-wrap gap-2">
+            {[
+              "Biomaterials",
+              "AI in Surgery",
+              "Medical Devices",
+              "Hand Surgery",
+              "Health Literacy",
+              "Python",
+              "Spanish",
+              "Italian",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-white border border-brand/10 px-4 py-1.5 text-sm text-brand shadow-sm"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

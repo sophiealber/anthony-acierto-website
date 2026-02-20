@@ -33,25 +33,30 @@ const roles = [
 
 export default function Leadership() {
   return (
-    <section id="leadership" className="px-8 lg:px-16 py-16">
-      <p className="text-sm font-semibold text-brand uppercase tracking-wide">
-        Leadership &amp; Service
-      </p>
+    <section id="leadership" className="bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6 py-20">
+        <h2 className="text-4xl font-serif text-gray-900">
+          Leadership &amp; Service
+        </h2>
 
-      <div className="mt-6 space-y-5 max-w-2xl">
-        {roles.map((r, i) => (
-          <div key={i} className="flex gap-3">
-            <div className="mt-1.5 w-2 h-2 rounded-full bg-brand shrink-0" />
-            <div>
-              <p className="text-base text-slate-900">
-                <span className="font-semibold">{r.role}</span>
-                <span className="text-slate-400"> / </span>
-                <span className="text-brand font-medium">{r.org}</span>
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {roles.map((r, i) => (
+            <div
+              key={i}
+              className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <p className="text-xs font-semibold text-brand uppercase tracking-wide">
+                {r.role}
               </p>
-              <p className="mt-0.5 text-sm text-slate-500">{r.desc}</p>
+              <h3 className="mt-2 text-lg font-serif text-gray-900">
+                {r.org}
+              </h3>
+              <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+                {r.desc}
+              </p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

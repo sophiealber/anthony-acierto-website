@@ -1,133 +1,150 @@
 export default function Research() {
   return (
-    <section id="research" className="px-8 lg:px-16 py-16">
-      <p className="text-sm font-semibold text-brand uppercase tracking-wide">
-        Research &amp; Publications
-      </p>
+    <section id="research" className="bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6 py-20">
+        <h2 className="text-4xl font-serif text-gray-900">
+          Research &amp; Publications
+        </h2>
 
-      <div className="mt-6 space-y-8 max-w-2xl">
-        {/* Lab experiences */}
-        <div>
-          <div className="flex items-baseline justify-between gap-4">
-            <h3 className="text-lg font-semibold text-slate-900">
+        {/* Lab Cards */}
+        <div className="mt-10 grid md:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm hover:shadow-md transition-shadow">
+            <p className="text-xs font-semibold text-brand uppercase tracking-wide">
+              Oct 2021 — May 2024
+            </p>
+            <h3 className="mt-2 text-xl font-serif text-gray-900">
               SU Bioinspired Institute
             </h3>
-            <span className="text-xs text-slate-400 whitespace-nowrap">
-              Oct 2021 — May 2024
-            </span>
+            <p className="text-sm text-brand font-medium">
+              PI: Dr. James H. Henderson
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              Developed shape memory polymers proven to prevent
+              antibiotic-resistant biofilm growth on implants. 10+ hours/week in
+              SMP manufacturing, cell &amp; bacterial culture, and
+              thermal/mechanical analysis.
+            </p>
           </div>
-          <p className="text-sm text-brand font-medium">
-            Student Researcher &middot; PI: Dr. James H. Henderson
-          </p>
-          <p className="mt-2 text-sm text-slate-600">
-            Developed shape memory polymers proven to prevent antibiotic-resistant
-            biofilm growth on implanted objects. Conducted 10+ hours/week of
-            research in SMP manufacturing, cell and bacterial culture, silk-coated
-            surface analysis, and thermal/mechanical testing.
-          </p>
-        </div>
 
-        <div>
-          <div className="flex items-baseline justify-between gap-4">
-            <h3 className="text-lg font-semibold text-slate-900">
+          <div className="rounded-2xl border border-gray-200 bg-white p-7 shadow-sm hover:shadow-md transition-shadow">
+            <p className="text-xs font-semibold text-brand uppercase tracking-wide">
+              May — Aug 2023
+            </p>
+            <h3 className="mt-2 text-xl font-serif text-gray-900">
               Cleveland Clinic / IBM
             </h3>
-            <span className="text-xs text-slate-400 whitespace-nowrap">
-              May — Aug 2023
-            </span>
+            <p className="text-sm text-brand font-medium">
+              Discovery Accelerator AI Intern &middot; PI: Dr. Tara Karamlou
+            </p>
+            <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+              Programmed IBM&apos;s &lsquo;Deep Search&rsquo; to automate
+              literature reviews for cardiac surgery research. Bridged
+              communication between Cleveland Clinic surgeons and IBM scientists.
+            </p>
           </div>
-          <p className="text-sm text-brand font-medium">
-            Discovery Accelerator AI Intern &middot; PI: Dr. Tara Karamlou
-          </p>
-          <p className="mt-2 text-sm text-slate-600">
-            Enhanced the partnership between Cleveland Clinic cardiac surgery
-            researchers and IBM scientists. Programmed IBM&apos;s &lsquo;Deep
-            Search&rsquo; tool to expedite literature searches and reviews for
-            cardiac surgery research.
-          </p>
         </div>
 
         {/* Publications */}
-        <div>
-          <h3 className="text-lg font-semibold text-slate-900 mb-4">
-            Publications
-          </h3>
-          <div className="space-y-4">
-            <div className="rounded-lg bg-slate-50 border border-slate-100 p-4">
-              <p className="text-sm text-slate-700">
-                E. Oguntade, C. Wigham, L. Owuor, K. O&apos;Grady,{" "}
-                <span className="font-semibold">A. Acierto</span>, R. Zha, J.
-                Henderson. &ldquo;Dry and wet wrinkling of a silk fibroin
-                biopolymer by a shape-memory material.&rdquo;
-              </p>
-              <p className="mt-1 text-sm text-brand italic">
-                J Mater Chem B, vol. 12, no. 26, 2024
-              </p>
+        <h3 className="mt-14 text-2xl font-serif text-gray-900">
+          Publications
+        </h3>
+        <div className="mt-6 space-y-4">
+          {[
+            {
+              authors:
+                'E. Oguntade, C. Wigham, L. Owuor, K. O\'Grady, **A. Acierto**, R. Zha, J. Henderson',
+              title:
+                "Dry and wet wrinkling of a silk fibroin biopolymer by a shape-memory material with insight into mechanical effects on secondary structures in the silk network",
+              journal: "J Mater Chem B, vol. 12, no. 26, 2024",
+              status: "published",
+            },
+            {
+              authors:
+                'R. Mahboubi, K. Dinkla, A. Weiss, **A. Acierto**, P. Staar, J. Robinson, M. Hammoud, T. Karamlou',
+              title:
+                "SciScribe: Automating & Contextualizing Literature Reviews in Cardiac Surgery",
+              journal:
+                "The Journal of Thoracic and Cardiovascular Surgery, 2024",
+              status: "in press",
+            },
+            {
+              authors:
+                'E. Oguntade, L. Owuor, C. Du, **A. Acierto**, S. Meyer, M. Monroe, J. Henderson',
+              title:
+                "Bacterial Response to Shape-Memory Actuated Silk Wrinkled Surface Topographies as a Strategy for Biofilm Prevention",
+              journal: "",
+              status: "in review",
+            },
+            {
+              authors:
+                'F. Donelson, J. Kochanowski, L. Hamilton, **A. Acierto**, X. Zhao, J. Henderson',
+              title:
+                "Investigating the Effects of Dynamic Micropatterns on Cell Polarization and Motility",
+              journal: "",
+              status: "in prep",
+            },
+          ].map((pub, i) => (
+            <div
+              key={i}
+              className="rounded-xl bg-white border border-gray-200 p-5 hover:border-brand/30 transition-colors"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex-1">
+                  <p className="text-sm text-gray-900 font-medium leading-snug">
+                    &ldquo;{pub.title}&rdquo;
+                  </p>
+                  <p className="mt-1 text-xs text-gray-500">
+                    {pub.authors.split("**A. Acierto**").map((part, j, arr) => (
+                      <span key={j}>
+                        {part}
+                        {j < arr.length - 1 && (
+                          <span className="font-bold text-gray-700">
+                            A. Acierto
+                          </span>
+                        )}
+                      </span>
+                    ))}
+                  </p>
+                  {pub.journal && (
+                    <p className="mt-1 text-xs text-brand italic">
+                      {pub.journal}
+                    </p>
+                  )}
+                </div>
+                <span
+                  className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium ${
+                    pub.status === "published"
+                      ? "bg-emerald-50 text-emerald-700"
+                      : pub.status === "in press"
+                        ? "bg-blue-50 text-blue-700"
+                        : pub.status === "in review"
+                          ? "bg-amber-50 text-amber-700"
+                          : "bg-gray-100 text-gray-500"
+                  }`}
+                >
+                  {pub.status}
+                </span>
+              </div>
             </div>
-
-            <div className="rounded-lg bg-slate-50 border border-slate-100 p-4">
-              <p className="text-sm text-slate-700">
-                R. Mahboubi, K. Dinkla, A. Weiss,{" "}
-                <span className="font-semibold">A. Acierto</span>, P. Staar, J.
-                Robinson, M. Hammoud, T. Karamlou. &ldquo;SciScribe: Automating
-                &amp; Contextualizing Literature Reviews in Cardiac
-                Surgery.&rdquo;
-              </p>
-              <p className="mt-1 text-sm text-brand italic">
-                The Journal of Thoracic and Cardiovascular Surgery, 2024 (In
-                Press)
-              </p>
-            </div>
-
-            <div className="rounded-lg bg-slate-50 border border-slate-100 p-4">
-              <p className="text-sm text-slate-700">
-                E. Oguntade, L. Owuor, C. Du,{" "}
-                <span className="font-semibold">A. Acierto</span>, S. Meyer, M.
-                Monroe, J. Henderson. &ldquo;Bacterial Response to Shape-Memory
-                Actuated Silk Wrinkled Surface Topographies as a Strategy for
-                Biofilm Prevention.&rdquo;
-              </p>
-              <p className="mt-1 text-sm text-slate-400 italic">In Review</p>
-            </div>
-
-            <div className="rounded-lg bg-slate-50 border border-slate-100 p-4">
-              <p className="text-sm text-slate-700">
-                F. Donelson, J. Kochanowski, L. Hamilton,{" "}
-                <span className="font-semibold">A. Acierto</span>, X. Zhao, J.
-                Henderson. &ldquo;Investigating the Effects of Dynamic
-                Micropatterns on Cell Polarization and Motility.&rdquo;
-              </p>
-              <p className="mt-1 text-sm text-slate-400 italic">In Prep</p>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Presentations */}
-        <div>
-          <h3 className="text-lg font-semibold text-slate-900 mb-3">
-            Presentations
-          </h3>
-          <div className="space-y-2">
-            {[
-              {
-                text: "\"The Effect of Hydration on Manufactured Shape Memory Polymer Parts\" — Plenary oral presentation, Northeast Bioengineering Conference (NEBEC), Drexel University, March 2023",
-              },
-              {
-                text: "\"The Effect of Hydration on Manufactured SMP Parts with Insight into Shape Memory Actuated Wrinkles\" — SOURCE Fall Poster Symposium, Syracuse University, December 2023",
-              },
-              {
-                text: "\"P.I.B.I. Check: A Portable Impedance Breast Imaging Device\" — SOURCE Fall Poster Symposium, Syracuse University, December 2023",
-              },
-              {
-                text: "\"Ulcer Foot Optical Analysis Device\" — Senior Design Poster, NEBEC, Drexel University, March 2023",
-              },
-            ].map((pres, i) => (
-              <p key={i} className="text-sm text-slate-600 flex gap-2">
-                <span className="text-brand shrink-0 mt-0.5">&#9679;</span>
-                {pres.text}
-              </p>
-            ))}
-          </div>
+        <h3 className="mt-14 text-2xl font-serif text-gray-900">
+          Presentations
+        </h3>
+        <div className="mt-6 space-y-3">
+          {[
+            "\"The Effect of Hydration on Manufactured Shape Memory Polymer Parts\" — Plenary oral presentation, NEBEC, Drexel University (March 2023)",
+            "\"The Effect of Hydration on Manufactured SMP Parts with Insight into Shape Memory Actuated Wrinkles\" — SOURCE Poster Symposium, Syracuse (Dec 2023)",
+            "\"P.I.B.I. Check: A Portable Impedance Breast Imaging Device\" — SOURCE Poster Symposium, Syracuse (Dec 2023)",
+            "\"Ulcer Foot Optical Analysis Device\" — Senior Design Poster, NEBEC, Drexel University (March 2023)",
+          ].map((pres, i) => (
+            <p key={i} className="text-sm text-gray-600 flex gap-3 leading-relaxed">
+              <span className="text-brand font-bold shrink-0">{i + 1}.</span>
+              {pres}
+            </p>
+          ))}
         </div>
       </div>
     </section>
