@@ -75,14 +75,6 @@ export default function Research() {
               journal: "",
               status: "in review",
             },
-            {
-              authors:
-                'F. Donelson, J. Kochanowski, L. Hamilton, **A. Acierto**, X. Zhao, J. Henderson',
-              title:
-                "Investigating the Effects of Dynamic Micropatterns on Cell Polarization and Motility",
-              journal: "",
-              status: "in prep",
-            },
           ].map((pub, i) => (
             <div
               key={i}

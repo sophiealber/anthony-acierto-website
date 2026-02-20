@@ -1,9 +1,15 @@
 const clinical = [
   {
-    title: "KIDNEE Club Volunteer",
+    title: "KIDNEE Club Chair",
     org: "Pediatrics Interest Group, Cincinnati, OH",
     period: "Sep 2024 — Present",
-    desc: "Matched with a pediatric dialysis patient as a buddy, providing company and support during treatment sessions.",
+    desc: "Chair of mentorship program for pediatric dialysis patients. Matched with a pediatric dialysis patient as a buddy, providing company and support during treatment sessions.",
+  },
+  {
+    title: "Director of the Urban Health Project",
+    org: "University of Cincinnati College of Medicine",
+    period: "2025 — Present",
+    desc: "Secured $120,000 in funding and managed 21 interns across 14 sites. Generated $100,000 of direct impact in the greater Cincinnati area.",
   },
   {
     title: "Cardiology Volunteer",

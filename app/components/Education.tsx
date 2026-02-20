@@ -8,7 +8,7 @@ export default function Education() {
           {/* Medical School */}
           <div className="rounded-2xl bg-brand-dark p-8 text-white">
             <p className="text-brand-100 text-sm font-medium">
-              2024 — Present &middot; Anticipated 2028
+              2024 — Present &middot; Anticipated 2028 (Year 3)
             </p>
             <h3 className="mt-3 text-2xl font-serif">
               University of Cincinnati College of Medicine
@@ -17,7 +17,7 @@ export default function Education() {
               Doctor of Medicine (M.D.)
             </p>
             <p className="mt-4 text-blue-100/80 text-sm leading-relaxed">
-              First-year medical student pursuing clinical medicine and research
+              Third-year medical student pursuing clinical medicine and research
               at the intersection of technology and patient care.
             </p>
           </div>

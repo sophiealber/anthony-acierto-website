@@ -24,7 +24,6 @@ export default function About() {
               "Biomaterials",
               "AI in Surgery",
               "Medical Devices",
-              "Hand Surgery",
               "Health Literacy",
               "Python",
               "Spanish",

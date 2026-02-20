@@ -4,10 +4,10 @@ export default function Hero() {
   return (
     <section className="pt-14">
       <div className="max-w-6xl mx-auto px-6 py-20 lg:py-28">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex flex-col items-center justify-center gap-12 lg:gap-20">
           {/* Photo */}
           <div className="shrink-0">
-            <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-2xl overflow-hidden shadow-2xl shadow-brand/10 ring-1 ring-black/5">
+            <div className="relative w-96 h-96 rounded-2xl overflow-hidden shadow-2xl shadow-brand/10 ring-1 ring-black/5">
               <Image
                 src="/anthony.jpg"
                 alt="Anthony Acierto"
@@ -19,7 +19,7 @@ export default function Hero() {
           </div>
 
           {/* Text */}
-          <div className="text-center lg:text-left">
+          <div className="text-center">
             <p className="text-sm font-semibold text-brand uppercase tracking-widest">
               Student Doctor
             </p>
@@ -27,12 +27,12 @@ export default function Hero() {
               Anthony Acierto
             </h1>
             <p className="mt-4 text-xl text-gray-500 max-w-lg">
-              First-year M.D. candidate at the University of Cincinnati College
+              Third-year M.D. candidate at the University of Cincinnati College
               of Medicine. Aspiring physician-researcher bridging engineering
               and patient care.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3 justify-center lg:justify-start">
+            <div className="mt-8 flex flex-wrap gap-3 justify-center">
               <a
                 href="mailto:aciertad@uc.mail.edu"
                 className="inline-flex items-center gap-2 rounded-full bg-brand text-white px-5 py-2.5 text-sm font-medium hover:bg-brand-dark transition-colors"
