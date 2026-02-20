@@ -1,97 +1,133 @@
 export default function Research() {
   return (
-    <section id="research" className="py-24 px-6 bg-white">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900">Research</h2>
-        <div className="mt-2 w-12 h-1 bg-primary rounded-full" />
+    <section id="research" className="px-8 lg:px-16 py-16">
+      <p className="text-sm font-semibold text-brand uppercase tracking-wide">
+        Research &amp; Publications
+      </p>
 
-        {/* Lab */}
-        <div className="mt-12 rounded-xl border border-surface-border bg-surface p-8">
-          <p className="text-sm text-gray-400 font-medium">
-            Oct 2021 — May 2024
-          </p>
-          <h3 className="mt-1 text-xl font-semibold text-gray-900">
-            Syracuse Bioinspired Institute
-          </h3>
-          <p className="text-primary font-medium">
-            Henderson Lab Group (Dr. James Henderson)
-          </p>
-
-          <div className="mt-6 space-y-4">
-            <div>
-              <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
-                Current Project
-              </h4>
-              <p className="mt-1 text-gray-700">
-                The Effect of Hydration on Manufactured Shape Memory Polymer
-                Parts for Wet Wrinkle Formation
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
-                Publication
-              </h4>
-              <p className="mt-1 text-gray-700">
-                &ldquo;Microcontact Printing on Shape Memory Polymers for
-                Altering Cell Morphology&rdquo;{" "}
-                <span className="text-gray-400 italic">— In Prep</span>
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
-                Additional Publication
-              </h4>
-              <p className="mt-1 text-gray-700">
-                Co-author, &ldquo;Dry and wet wrinkling of a silk fibroin
-                biopolymer by a shape-memory material&rdquo; —{" "}
-                <span className="text-primary font-medium">
-                  Journal of Materials Chemistry B
-                </span>{" "}
-                (2024)
-              </p>
-            </div>
+      <div className="mt-6 space-y-8 max-w-2xl">
+        {/* Lab experiences */}
+        <div>
+          <div className="flex items-baseline justify-between gap-4">
+            <h3 className="text-lg font-semibold text-slate-900">
+              SU Bioinspired Institute
+            </h3>
+            <span className="text-xs text-slate-400 whitespace-nowrap">
+              Oct 2021 — May 2024
+            </span>
           </div>
+          <p className="text-sm text-brand font-medium">
+            Student Researcher &middot; PI: Dr. James H. Henderson
+          </p>
+          <p className="mt-2 text-sm text-slate-600">
+            Developed shape memory polymers proven to prevent antibiotic-resistant
+            biofilm growth on implanted objects. Conducted 10+ hours/week of
+            research in SMP manufacturing, cell and bacterial culture, silk-coated
+            surface analysis, and thermal/mechanical testing.
+          </p>
+        </div>
 
-          <div className="mt-6">
-            <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
-              Skills &amp; Techniques
-            </h4>
-            <div className="mt-2 flex flex-wrap gap-2">
-              {[
-                "Shape Memory Polymers",
-                "Dynamic Mechanical Analysis",
-                "Cell Culture",
-                "4D Printing",
-                "Statistical Analysis",
-                "Biosafety Cabinets",
-                "Python",
-              ].map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full bg-teal/10 border border-teal/20 px-3 py-1 text-xs font-medium text-teal-dark"
-                >
-                  {skill}
-                </span>
-              ))}
+        <div>
+          <div className="flex items-baseline justify-between gap-4">
+            <h3 className="text-lg font-semibold text-slate-900">
+              Cleveland Clinic / IBM
+            </h3>
+            <span className="text-xs text-slate-400 whitespace-nowrap">
+              May — Aug 2023
+            </span>
+          </div>
+          <p className="text-sm text-brand font-medium">
+            Discovery Accelerator AI Intern &middot; PI: Dr. Tara Karamlou
+          </p>
+          <p className="mt-2 text-sm text-slate-600">
+            Enhanced the partnership between Cleveland Clinic cardiac surgery
+            researchers and IBM scientists. Programmed IBM&apos;s &lsquo;Deep
+            Search&rsquo; tool to expedite literature searches and reviews for
+            cardiac surgery research.
+          </p>
+        </div>
+
+        {/* Publications */}
+        <div>
+          <h3 className="text-lg font-semibold text-slate-900 mb-4">
+            Publications
+          </h3>
+          <div className="space-y-4">
+            <div className="rounded-lg bg-slate-50 border border-slate-100 p-4">
+              <p className="text-sm text-slate-700">
+                E. Oguntade, C. Wigham, L. Owuor, K. O&apos;Grady,{" "}
+                <span className="font-semibold">A. Acierto</span>, R. Zha, J.
+                Henderson. &ldquo;Dry and wet wrinkling of a silk fibroin
+                biopolymer by a shape-memory material.&rdquo;
+              </p>
+              <p className="mt-1 text-sm text-brand italic">
+                J Mater Chem B, vol. 12, no. 26, 2024
+              </p>
+            </div>
+
+            <div className="rounded-lg bg-slate-50 border border-slate-100 p-4">
+              <p className="text-sm text-slate-700">
+                R. Mahboubi, K. Dinkla, A. Weiss,{" "}
+                <span className="font-semibold">A. Acierto</span>, P. Staar, J.
+                Robinson, M. Hammoud, T. Karamlou. &ldquo;SciScribe: Automating
+                &amp; Contextualizing Literature Reviews in Cardiac
+                Surgery.&rdquo;
+              </p>
+              <p className="mt-1 text-sm text-brand italic">
+                The Journal of Thoracic and Cardiovascular Surgery, 2024 (In
+                Press)
+              </p>
+            </div>
+
+            <div className="rounded-lg bg-slate-50 border border-slate-100 p-4">
+              <p className="text-sm text-slate-700">
+                E. Oguntade, L. Owuor, C. Du,{" "}
+                <span className="font-semibold">A. Acierto</span>, S. Meyer, M.
+                Monroe, J. Henderson. &ldquo;Bacterial Response to Shape-Memory
+                Actuated Silk Wrinkled Surface Topographies as a Strategy for
+                Biofilm Prevention.&rdquo;
+              </p>
+              <p className="mt-1 text-sm text-slate-400 italic">In Review</p>
+            </div>
+
+            <div className="rounded-lg bg-slate-50 border border-slate-100 p-4">
+              <p className="text-sm text-slate-700">
+                F. Donelson, J. Kochanowski, L. Hamilton,{" "}
+                <span className="font-semibold">A. Acierto</span>, X. Zhao, J.
+                Henderson. &ldquo;Investigating the Effects of Dynamic
+                Micropatterns on Cell Polarization and Motility.&rdquo;
+              </p>
+              <p className="mt-1 text-sm text-slate-400 italic">In Prep</p>
             </div>
           </div>
         </div>
 
-        {/* Medical School Research */}
-        <div className="mt-6 rounded-xl border border-surface-border bg-surface p-8">
-          <p className="text-sm text-gray-400 font-medium">2024 — Present</p>
-          <h3 className="mt-1 text-xl font-semibold text-gray-900">
-            UC College of Medicine
+        {/* Presentations */}
+        <div>
+          <h3 className="text-lg font-semibold text-slate-900 mb-3">
+            Presentations
           </h3>
-          <p className="text-primary font-medium">
-            15th Annual Research &amp; Service Symposium
-          </p>
-          <p className="mt-3 text-gray-700">
-            &ldquo;Literacy-Sensitive Educational Handouts to Improve Patient
-            Preparedness and Outcomes in Outpatient Hand Surgery&rdquo;
-          </p>
+          <div className="space-y-2">
+            {[
+              {
+                text: "\"The Effect of Hydration on Manufactured Shape Memory Polymer Parts\" — Plenary oral presentation, Northeast Bioengineering Conference (NEBEC), Drexel University, March 2023",
+              },
+              {
+                text: "\"The Effect of Hydration on Manufactured SMP Parts with Insight into Shape Memory Actuated Wrinkles\" — SOURCE Fall Poster Symposium, Syracuse University, December 2023",
+              },
+              {
+                text: "\"P.I.B.I. Check: A Portable Impedance Breast Imaging Device\" — SOURCE Fall Poster Symposium, Syracuse University, December 2023",
+              },
+              {
+                text: "\"Ulcer Foot Optical Analysis Device\" — Senior Design Poster, NEBEC, Drexel University, March 2023",
+              },
+            ].map((pres, i) => (
+              <p key={i} className="text-sm text-slate-600 flex gap-2">
+                <span className="text-brand shrink-0 mt-0.5">&#9679;</span>
+                {pres.text}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </section>

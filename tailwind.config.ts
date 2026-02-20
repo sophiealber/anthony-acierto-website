@@ -5,20 +5,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#1e6bb8",
-          light: "#3b82f6",
-          dark: "#1a5a9e",
-        },
-        surface: {
-          DEFAULT: "#f8fafc",
-          white: "#ffffff",
-          muted: "#f1f5f9",
-          border: "#e2e8f0",
-        },
-        teal: {
-          DEFAULT: "#0d9488",
-          light: "#14b8a6",
+        brand: {
+          DEFAULT: "#0369a1",
+          light: "#0ea5e9",
+          dark: "#075985",
+          50: "#f0f9ff",
         },
       },
       fontFamily: {

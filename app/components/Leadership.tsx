@@ -1,61 +1,57 @@
 const roles = [
   {
-    title: "President",
+    role: "President",
     org: "Honors Pre-health Society",
-    description:
-      "Restarted the society after a six-year hiatus, growing it to nearly 100 members. Built faculty relationships and collaborated with campus pre-health groups to host joint events.",
+    desc: "Restarted after 6-year hiatus, grew to ~100 members. Collaborated with campus groups to host alumni physician speaking events and a politics in healthcare event.",
   },
   {
-    title: "Peer Mentorship Program Director",
-    org: "Biomedical Engineering Society (BMES)",
-    description:
-      "Chaired the mentorship program pairing first-year engineers with upperclass mentors. Coordinated events and fundraising for donations to local hospitals.",
+    role: "Peer Mentorship Director",
+    org: "Biomedical Engineering Society",
+    desc: "Paired first-year engineers with upperclass mentors. Coordinated events and fundraised for field trips to nearby engineering firms.",
   },
   {
-    title: "Ignite Fellow",
+    role: "Secretary",
+    org: "Tau Beta Pi (Engineering Honors Society)",
+    desc: "Admitted based on academics (top eighth of class), character, and leadership. Planned and hosted Vex Robotics competitions for local high school students.",
+  },
+  {
+    role: "Ignite Fellow",
     org: "Teach For America",
-    description:
-      "Led small group math instruction for underserved junior high students alongside veteran educators. Raised test scores and built student confidence for advanced coursework.",
+    desc: "Led small group math instruction for underserved junior high students. Raised test scores and bolstered student confidence for advanced coursework.",
   },
   {
-    title: "General Member",
+    role: "Ambassador",
     org: "Engineering Ambassadors",
-    description:
-      "Educated local city school students with learning disabilities in STEM, demonstrating that complex science can be fun and accessible.",
+    desc: "Taught STEM to local students with learning disabilities, demonstrating that they can thrive in challenging science tasks.",
   },
   {
-    title: "General Member",
+    role: "Member",
     org: "Engineering World Health",
-    description:
-      "Constructed health kits including EKGs to be sent to communities abroad. Hosted soldering workshops to draw interest and build skills.",
+    desc: "Built EKG health kits for communities abroad. Hosted soldering workshops for outreach.",
   },
 ];
 
 export default function Leadership() {
   return (
-    <section id="leadership" className="py-24 px-6 bg-white">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900">
-          Leadership &amp; Service
-        </h2>
-        <div className="mt-2 w-12 h-1 bg-primary rounded-full" />
+    <section id="leadership" className="px-8 lg:px-16 py-16">
+      <p className="text-sm font-semibold text-brand uppercase tracking-wide">
+        Leadership &amp; Service
+      </p>
 
-        <div className="mt-12 grid sm:grid-cols-2 gap-6">
-          {roles.map((role, i) => (
-            <div
-              key={i}
-              className="rounded-xl border border-surface-border bg-surface p-6 hover:shadow-md transition-shadow"
-            >
-              <p className="text-primary font-semibold text-sm">{role.org}</p>
-              <h3 className="mt-1 text-lg font-semibold text-gray-900">
-                {role.title}
-              </h3>
-              <p className="mt-3 text-gray-600 text-sm leading-relaxed">
-                {role.description}
+      <div className="mt-6 space-y-5 max-w-2xl">
+        {roles.map((r, i) => (
+          <div key={i} className="flex gap-3">
+            <div className="mt-1.5 w-2 h-2 rounded-full bg-brand shrink-0" />
+            <div>
+              <p className="text-base text-slate-900">
+                <span className="font-semibold">{r.role}</span>
+                <span className="text-slate-400"> / </span>
+                <span className="text-brand font-medium">{r.org}</span>
               </p>
+              <p className="mt-0.5 text-sm text-slate-500">{r.desc}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

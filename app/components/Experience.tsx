@@ -1,90 +1,113 @@
-const experiences = [
+const clinical = [
   {
-    title: "Cardiology Volunteer",
-    org: "St. Joseph's Hospital",
-    location: "Syracuse, NY",
-    period: "Aug 2022 — May 2024",
+    title: "KIDNEE Club Volunteer",
+    org: "Pediatrics Interest Group, Cincinnati, OH",
+    period: "Sep 2024 — Present",
     items: [
-      "Cared for patients across two floors of the Cardiology unit, providing comfort and support during recovery",
-      "Developed an automated volunteer check-in system in Excel, saving hours of manual work for the director of volunteer services",
+      "Matched with a pediatric dialysis patient to provide company and support during treatment",
+      "Learning from the patient perspective how chronic diseases affect children and families",
     ],
   },
   {
-    title: "Emergency Department & Dialysis Volunteer",
-    org: "Firelands Regional Medical Center",
-    location: "Sandusky, OH",
+    title: "Cardiology Volunteer",
+    org: "St. Joseph's Hospital, Syracuse, NY",
+    period: "Aug 2022 — Dec 2023",
+    items: [
+      "Cared for patients across two Cardiology floors, supporting wellness during recovery",
+      "Developed automated volunteer check-in system, saving hours for the volunteer director",
+    ],
+  },
+  {
+    title: "ED & Dialysis Volunteer",
+    org: "Firelands Regional Medical Center, Sandusky, OH",
     period: "May — Aug 2022",
     items: [
       "Guided patients through registration and comforted families in the emergency department",
-      "Facilitated patient transport and assembled materials for dialysis procedures in the outpatient clinic",
-    ],
-  },
-  {
-    title: "Operations Associate",
-    org: "PT Solutions",
-    location: "Brunswick, OH",
-    period: "May — Aug 2022",
-    items: [
-      "Led inspection of biomedical devices including spinal fusion implants",
-      "Assisted in the manufacturing and assembly of biomedical devices alongside the head engineer",
-      "Automated documentation processes through Excel Visual Basic",
-    ],
-  },
-  {
-    title: "Physician Shadowing",
-    org: "Orthopedic Surgery & Long-term Care",
-    location: "Canton, OH",
-    period: "January 2022",
-    items: [
-      "Shadowed an orthopedic surgeon, learning X-ray and MRI interpretation and observing cortisone injections and fluid aspiration",
-      "Followed a long-term care physician, learning patient assessment, drug administration, and HIPAA compliance",
+      "Facilitated patient transport and managed documentation in the outpatient dialysis clinic",
     ],
   },
 ];
 
+const professional = [
+  {
+    title: "Portable Breast Cancer Detection",
+    org: "Senior Design, Syracuse University",
+    period: "Oct 2021 — May 2024",
+    items: [
+      "Collaborated with four students and a radiologist to create a novel breast cancer assessment using electric impedance tomography",
+      "Co-led software development using Arduino and Python for impedance measurement and EIT mapping",
+    ],
+  },
+  {
+    title: "Diabetic Foot Ulcer Detection",
+    org: "Senior Design, Syracuse University",
+    period: "Dec 2022 — May 2023",
+    items: [
+      "Designed and prototyped an imaging device with a neurologist to detect ulcers",
+      "Coded ulcer detection AI scripts with over 75% accuracy; presented at NEBEC Design Competition",
+    ],
+  },
+  {
+    title: "Operations Associate",
+    org: "PT Solutions, Brunswick, OH",
+    period: "May — Aug 2022",
+    items: [
+      "Led inspection of biomedical devices including spinal fusion implants",
+      "Automated documentation through Excel Visual Basic",
+    ],
+  },
+];
+
+function TimelineSection({
+  title,
+  items,
+}: {
+  title: string;
+  items: typeof clinical;
+}) {
+  return (
+    <div>
+      <h3 className="text-base font-semibold text-slate-900 mb-4">{title}</h3>
+      <div className="space-y-6">
+        {items.map((exp, i) => (
+          <div key={i}>
+            <div className="flex items-baseline justify-between gap-4">
+              <h4 className="text-sm font-semibold text-slate-900">
+                {exp.title}
+              </h4>
+              <span className="text-xs text-slate-400 whitespace-nowrap">
+                {exp.period}
+              </span>
+            </div>
+            <p className="text-sm text-brand">{exp.org}</p>
+            <ul className="mt-2 space-y-1">
+              {exp.items.map((item, j) => (
+                <li
+                  key={j}
+                  className="text-sm text-slate-600 flex gap-2 leading-relaxed"
+                >
+                  <span className="text-slate-300 shrink-0">&#8212;</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900">
-          Clinical &amp; Professional Experience
-        </h2>
-        <div className="mt-2 w-12 h-1 bg-primary rounded-full" />
+    <section id="experience" className="px-8 lg:px-16 py-16 bg-slate-50">
+      <p className="text-sm font-semibold text-brand uppercase tracking-wide">
+        Experience
+      </p>
 
-        <div className="mt-12 space-y-10">
-          {experiences.map((exp, i) => (
-            <div
-              key={i}
-              className="relative pl-8 border-l-2 border-primary/20"
-            >
-              <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface" />
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {exp.title}
-                  </h3>
-                  <p className="text-primary font-medium text-sm">
-                    {exp.org} — {exp.location}
-                  </p>
-                </div>
-                <p className="text-sm text-gray-400 font-medium whitespace-nowrap">
-                  {exp.period}
-                </p>
-              </div>
-              <ul className="mt-3 space-y-1.5">
-                {exp.items.map((item, j) => (
-                  <li
-                    key={j}
-                    className="text-gray-600 text-sm leading-relaxed flex gap-2"
-                  >
-                    <span className="text-primary mt-1 shrink-0">&#8226;</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+      <div className="mt-6 space-y-10 max-w-2xl">
+        <TimelineSection title="Clinical & Volunteer" items={clinical} />
+        <TimelineSection title="Engineering & Professional" items={professional} />
       </div>
     </section>
   );
